@@ -1,0 +1,116 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #2d836b; /* Light grey background for contrast */
+    color: #333;
+}
+
+/* Container for the main layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #333; /* Dark background for header */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+/* Navigation styles */
+header nav ul {
+    display: flex;
+    list-style: none;
+    font-weight:bolder;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    
+}
+
+header nav ul li a {
+    color: #f4e00b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #816405;
+    border-radius: 10px;
+}
+
+/* Main section styling */
+main {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Image gallery styling */
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Center images */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    margin-top: 20px; /* Space above image gallery */
+}
+
+.image-item {
+    flex: 1 1 30%; /* Each image item takes 30% of the width */
+    text-align: center; /* Center the text below each image */
+    margin: 10px; /* Space around items */
+}
+
+.image-item img {
+    max-width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.image-item img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #0e0d0d; /* Dark footer */
+    color: #403131;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.developer-info {
+    margin-top: 20px; /* Space above developer info */
+}
+
+.developer-info img {
+    width: 100px;
+    height: auto;
+}

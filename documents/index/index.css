@@ -1,0 +1,125 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Font for the body */
+    line-height: 1.6; /* Line height for better readability */
+    background: linear-gradient(
+        to bottom, 
+        rgba(96, 0, 0, 0.9),  /* Dark Red with 90% opacity */
+        rgba(255, 165, 0, 0.7), /* Orange with 70% opacity */
+        rgba(255, 255, 0, 0.5)  /* Yellow with 50% opacity */
+    );
+    background-repeat: no-repeat; /* Prevents repeating background */
+    background-size: cover; /* Ensures gradient covers full area */
+    color: #333; /* Dark text color */
+    min-height: 100vh; /* Ensures full viewport height */
+}
+
+/* Container for the main layout */
+.container {
+    max-width: 1000px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+}
+
+/* Header styling */
+header {
+    background-color: #333; /* Dark background for header */
+    color: #fff; /* White text color */
+    padding: 15px 0; /* Reduced padding for a smaller header */
+}
+
+header .container {
+    display: flex; /* Flex layout for header content */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center align items */
+}
+
+header h1 {
+    margin-left: 20px; /* Space from the left */
+    font-size: 0.5rem; /* Larger font size for title */
+}
+
+/* Navigation styles */
+header nav ul {
+    display: flex; /* Flex layout for navigation links */
+    list-style: none; /* Remove bullet points */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+header nav ul li a {
+    color: #FFD700; /* White link color */
+    text-decoration: none; /* No underline on links */
+    font-weight: bold; /* Bold links */
+    padding: 8px 15px; /* Adjusted padding around links */
+    transition: transform 0.3s ease, background 0.3s ease; /* Added transform transition for smooth side movement */
+    border-radius: 4px; /* Rounded corners */
+}
+
+header nav ul li a:hover {
+    background-color: #555; /* Darker background on hover */
+    transform: translateX(5px); /* Moves the link 5px to the right on hover */
+}
+
+/* Main section styling */
+main {
+    padding: 40px 0; /* Padding for the main section */
+    text-align: center; /* Centered text */
+    color: #5a0a0a; /* Darker red text color */
+}
+
+main h2 {
+    font-size: 2.3rem; /* Large font size for headings */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+main p {
+    font-size: 1.1rem; /* Font size for paragraphs */
+    margin-bottom: 30px; /* Space below paragraph */
+    width: 75%; /* Width of the paragraph */
+    margin-left: auto; /* Center alignment */
+    margin-right: auto; /* Center alignment */
+}
+
+/* Image gallery styling */
+.image-gallery {
+    display: flex; /* Flex layout for the gallery */
+    justify-content: center; /* Center images */
+    gap: 15px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap */
+}
+
+.image-gallery img {
+    width: 28%; /* Each image takes 28% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition effects */
+    opacity: 0.85; /* Slight transparency */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.image-gallery img:hover {
+    transform: translateY(-5px) scale(1.03); /* Move up and scale slightly on hover */
+    opacity: 1; /* Fully opaque on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Dark footer */
+    color: #fff; /* White text color */
+    padding: 15px 0; /* Reduced padding for footer */
+    text-align: center; /* Centered text in footer */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}

@@ -1,0 +1,172 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and HTML styling */
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(
+        rgba(96, 0, 0, 0.9),  /* Dark Red with 90% opacity */
+        rgba(255, 165, 0, 0.7), /* Orange with 70% opacity */
+        rgba(255, 255, 0, 0.5)  /* Yellow with 50% opacity */
+    );
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
+}
+
+/* Main wrapper to fill the screen */
+.container {
+    flex-grow: 1; /* This makes the container take up all available space */
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding for the container */
+}
+
+/* Header styling */
+header {
+    background-color: #333; /* Dark brown header */
+    color: #fff; /* White text color */
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center align items */
+}
+
+header h1 {
+    margin-left: 20px; /* Space from the left */
+    font-size: 2rem; /* Larger font size for the title */
+}
+
+header nav ul {
+    display: flex; /* Flex layout for nav items */
+    list-style: none; /* Remove bullet points */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+header nav ul li a {
+    color: #fff; /* White link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold links */
+    padding: 10px 20px; /* Padding around links */
+    transition: background 0.3s ease; /* Transition for hover effect */
+}
+
+header nav ul li a:hover {
+    background-color: #555; /* Darker background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Main section styling */
+main {
+    padding: 40px 0; /* Padding for the main section */
+    text-align: center; /* Centered text */
+}
+
+main h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Table container to control overflow */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
+    max-width: 100%; /* Ensures it doesn't exceed the screen width */
+}
+
+/* General table styling */
+table {
+    width: 100%; /* Table takes full width of the container */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin-top: 20px; /* Space above the table */
+    table-layout: auto; /* Allows for dynamic resizing based on content */
+}
+
+/* Styling for table cells */
+th, td {
+    border: 1px solid #796e08; /* Border for table cells */
+    padding: 12px; /* Padding inside cells */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    max-width: 200px; /* Limit width of table cells */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Show ellipsis for overflowing text */
+}
+
+/* Header styles */
+th {
+    background-color: hsla(55, 92%, 46%, 0.596); /* Header background color */
+    text-align: left; /* Left align header text */
+}
+
+/* Body cell styles */
+td {
+    text-align: left; /* Left align table data */
+}
+
+/* Alternating row colors for readability */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff; /* White for odd rows */
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+    background-color: #ddd; /* Light gray on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Make table elements block level for better mobile responsiveness */
+    }
+    
+    th {
+        display: none; /* Hide headers */
+    }
+
+    tr {
+        margin-bottom: 15px; /* Space between rows */
+    }
+
+    td {
+        text-align: right; /* Align data to the right */
+        position: relative; /* Position for pseudo-elements */
+        padding-left: 50%; /* Space for pseudo-elements */
+    }
+
+    td:before {
+        content: attr(data-label); /* Use data-label for pseudo-elements */
+        position: absolute; /* Position absolutely */
+        left: 10px; /* Space from the left */
+        width: 45%; /* Width of label */
+        padding-right: 10px; /* Space from text */
+        white-space: nowrap; /* Prevent line breaks */
+        text-align: left; /* Align labels to the left */
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Dark brown footer */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Padding for footer */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
